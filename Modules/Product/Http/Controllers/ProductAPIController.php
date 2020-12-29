@@ -68,6 +68,10 @@ class ProductAPIController extends Controller
 
     public function addToCart($productId)
     {
+        if (empty(session('user'))) {
+            session(['messenger_error' => 'Login Or Register First']);
+            return redirect()->route('products');
+        }
         $product = \Modules\Product\Entities\Product::find($productId);
         $data = [
             "name" => $product->name,

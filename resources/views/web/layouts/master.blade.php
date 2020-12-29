@@ -92,5 +92,11 @@
     </script>
     {{session()->forget('messenger')}}
 @endif
+@if (Session::has('messenger_error'))
+    <script>
+        toastr.error("{{ Session::get('messenger_error') }}");
+    </script>
+    {{session()->forget('messenger_error')}}
+@endif
 </body>
 </html>

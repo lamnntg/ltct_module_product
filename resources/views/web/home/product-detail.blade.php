@@ -35,7 +35,7 @@
         <!--/ End Input Order -->
     </div>
     <div class="add-to-cart">
-        <a href="{{route('api.productCheckout', $product->id)}}" class="btn">Add to cart</a>
+        <a href="{{route('product.addToCart', $product->id)}}" class="btn">Add to cart</a>
     </div>
     <div class="default-social">
         <h4 class="share-now">Share:</h4>
