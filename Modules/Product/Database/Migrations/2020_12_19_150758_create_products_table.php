@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('price');
-            $table->string('category_id');
+            $table->integer('category_id');
             $table->integer('quantity');
             $table->integer('status');
             $table->char('created_by', 36)->nullable();
