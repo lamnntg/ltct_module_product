@@ -7,12 +7,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class ImageProduct extends Model
 {
-    use HasFactory;
-
-    protected $fillable = [];
+    protected $table = 'image_products';
+    protected $fillable = [
+        'id',
+        'product_id',
+        'url',
+        'size',
+        'type'
+    ];
     
-    protected static function newFactory()
+    public function product()
     {
-        return \Modules\Product\Database\factories\ImageProductFactory::new();
+        return $this->belongsTo('Modules\Product\Entities\Product');
     }
 }

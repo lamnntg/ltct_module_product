@@ -7,12 +7,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Category extends Model
 {
-    use HasFactory;
 
-    protected $fillable = [];
-    
-    protected static function newFactory()
-    {
-        return \Modules\Product\Database\factories\CategoryFactory::new();
-    }
+    protected $fillable = [
+        'id',
+        'name',
+    ];
+   
 }
