@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('product')->group(function() {
+Route::prefix('')->group(function() {
     Route::get('/', '\Modules\Product\Http\Controllers\ProductController@index')->name('products');
     Route::get('/login-after', '\Modules\Product\Http\Controllers\ProductAPIController@loginAfter')->name('product.login.after');
     Route::get('/logout', '\Modules\Product\Http\Controllers\ProductAPIController@logout')->name('product.logout');
