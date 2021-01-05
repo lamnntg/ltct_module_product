@@ -91,4 +91,9 @@ class ProductAPIController extends Controller
     {
         return Redirect()->to('https://web-ban-hang.vercel.app/cart?token='.session('token'));
     }
+
+    public function getCart()
+    {
+        return view('web.layouts.404');
+    }
 }

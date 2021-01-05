@@ -20,7 +20,7 @@
                         <ul class="list-main">
                             @if(session('user'))
                                 <li><i class="ti-user"></i> <a href="">{{json_decode(session('user'))->user->name}}</a></li>
-                                <li><i class="ti-shopping-cart"></i> <a href="#">Lịch sử mua hàng</a></li>
+                                <li><i class="ti-shopping-cart"></i> <a href="{{route('api.getCart')}}">Lịch sử mua hàng</a></li>
                                 <li><i class="ti-user"></i> <a href="{{route('product.logout')}}">Đăng xuất</a></li>
                             @else
                                 <li><i class="ti-user"></i> <a href="{{url('http://laravel-login-site.herokuapp.com/administration/register')}}">Đăng ký</a></li>

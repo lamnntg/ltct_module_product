@@ -20,6 +20,7 @@ Route::prefix('')->group(function() {
     Route::get('add-to-cart/{id}', '\Modules\Product\Http\Controllers\ProductAPIController@addToCart')->name('product.addToCart');
 
     Route::get('/product-detail/render', '\Modules\Product\Http\Controllers\ProductController@renderDetail')->name('product.renderdetail');
+    Route::get('get-cart','\Modules\Product\Http\Controllers\ProductAPIController@getCart')->name('api.getCart');
     Route::group(['prefix' => '/api'], function () {
         Route::get('product-detail/{id}', '\Modules\Product\Http\Controllers\ProductAPIController@apiProductDetail')->name('api.productCheckout');
     });
